@@ -1,0 +1,34 @@
+<html>
+<head></head>
+<body>
+<table align="center" border="border" cellpadding="10" cellspacing="0">
+	<tr><th>
+	<form action="\orderaction\" method="get">
+		<h2 align= "center">ORDER</h2><br/>
+		
+		{% for j in list %}
+		ITEM ID	<input type="text" name="itemid" value="{{j.itemid}}" readonly /><br/><br/>
+		ITEM NAME	<input type="text" name="itemname" value="{{j.itemname}}" readonly /><br/><br/>
+		<img src="{{ MEDIA_URL }}{{ j.image }}"  height="150" width="250" alt="" /><br/><br/>
+		{% endfor %}
+		QUANTITY	<input type="text" name="qty1" value=""/><br/><br/>
+		{% for j in list %}
+		AMOUNT	<input type="text" name="amt1" value="{{j.price}}" readonly /><br/><br/>
+		{% endfor %}
+		<!--PAYMENT TYPE	<input type="text" name="ptype" value=""/><br/><br/>
+		BANK	<input type="text" name="bank" value=""/><br/><br/>
+		DATE	<input type="date" name="odate" value=""/><br/><br/>
+		STATUS	<input type="text" name="status" value=""/><br/><br/>-->
+		<input type="submit" name="proceed" value="proceed"/>
+		<form action="\viewitem\">
+		<input type="submit" name="Back" value="Back"/>
+		</form>
+		</form>
+	</th></tr>
+</table>
+</body>
+</html>
+		
+		
+		
+		

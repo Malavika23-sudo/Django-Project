@@ -1,0 +1,82 @@
+{% include "sellerheader.html" %}
+<!-- 
+Body Section 
+-->
+	<div class="row">
+
+	<div class="span12">
+    <h3>Cateory</h3>	
+	<hr class="soft"/>
+	<div class="well np">
+    <br/>
+    <center>
+
+   <table border="1">
+
+                <tr>
+                <th >Category Code</th>
+                <th >Category Name</th>
+                </tr>
+      {% for r in list %}
+                <tr>
+            <td >{{r.catcode}}</td>
+                <td >{{r.catname}}</td>
+               
+               <td ><a href="/sell/?id={{r.catcode}}">Add Product</a></td>
+           
+                </tr>
+               {% empty %} 
+                <h3 >No Category</h3>
+				{% endfor  %}
+                </table> 
+  </center>
+  <br/>
+    <br/>
+        </div>
+
+
+	
+	</div>
+	</div>
+<!-- 
+Clients 
+-->
+<br/>
+<br/>
+<section class="our_client">
+	<hr class="soften"/>
+	
+	
+	
+</section>
+
+<!--
+Footer
+-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div><!-- /container -->
+
+<div class="copyright">
+<div class="container">
+	
+	<span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
+</div>
+</div>
+<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.easing-1.3.min.js"></script>
+    <script src="assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="assets/js/shop.js"></script>
+  </body>
+</html>
+               
+
+   
+     
+   

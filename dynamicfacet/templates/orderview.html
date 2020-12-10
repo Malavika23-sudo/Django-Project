@@ -1,0 +1,119 @@
+{% include "userheader.html" %}
+<!-- 
+Body Section 
+-->
+
+<div class="well well-small">
+		<h1>order items<small class="pull-right">  </small></h1>
+	<hr class="soften"/>	
+<form action="/orderaction/">
+	<table class="table table-bordered table-condensed">
+              <thead>
+                <tr>
+                <th></th>
+                  <th>Product</th>
+                  <th>Qty </th>
+				  <th>Unit price</th>
+              
+				</tr>
+              </thead>
+              <tbody>
+ {% for r in list %}
+                <tr>
+                <td><img width="100" src="{{ MEDIA_URL }}{{r.image}}" alt=""></td>
+                  <td>{{r.itemname}}</td>
+                  <td>{{r.qty1}}</td>
+				  <td>{{r.amt1}}</td>
+                  <td>
+				 
+					
+    
+                
+           {% endfor %}
+            <tr>
+               
+                </tr>
+                                
+				</tbody>
+            </table><br/>
+		
+		
+            
+					
+	<a href="/userhomes/" class="shopBtn btn-large"><span class="icon-arrow-left"></span> Continue Shopping </a>
+	{% if count > 0 %}
+	
+	
+
+	<input type="submit" class="shopBtn btn-large pull-right" value="CHECKOUT->"/> 
+                                  {%  endif %}
+</form>
+</div>
+<!-- 
+Clients 
+-->
+<br/>
+<br/>
+<section class="our_client">
+	<hr class="soften"/>
+	
+	
+	
+</section>
+
+<!--
+Footer
+-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div><!-- /container -->
+
+<div class="copyright">
+<div class="container">
+	
+	<span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
+</div>
+</div>
+<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.easing-1.3.min.js"></script>
+    <script src="assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="assets/js/shop.js"></script>
+  </body>
+</html>
+               
+              
+
+     
+      
+
+<html>
+<head></head>
+<body>
+	<table align="center" border="border">
+	<tr>
+		<th>Item id</th>
+		<th>Item name</th>
+		<th>Image</th>
+		<th>Quantity</th>
+		<th>Amount</th>
+		<!--<th>Status</th>-->
+	</tr>
+	{%for i in list%}
+	<tr>
+		<td>{{i.itemid}}</td>
+		<td>{{i.itemname}}</td>
+		<td><img src="{{ MEDIA_URL }}{{ i.image }}"  height="150" width="250" alt="" /></td>
+		<td>{{i.qty1}}</td>
+		<td>{{i.amt1}}</td>
+		<!--<td>{{i.mode}}</td>-->
+	</tr>
+	{%endfor%}
+	</table>
+</body>
+</html>

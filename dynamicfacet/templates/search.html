@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body><br/><br/><br/>
+	<table align="center" border="border" cellpadding="10" cellspacing="0">
+	<tr><th>
+		<form method="get">
+			{% csrf_token %}
+				SEARCH<input type="text" name="search" value=""/><br/><br/>
+				<input type="submit" name="search" value="search"/>
+		</form>
+	</th></tr>
+	</table>
+</body>
+</html>
